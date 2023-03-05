@@ -3,9 +3,12 @@
 CC = g++
 CFLAGS = -Wall -Wextra -Werror
 
-.PHONY: all main
+.PHONY: all main clean
 
 all: main
 
 main: main.cpp
 	$(CC) $(CFLAGS) $^ -o $@
+
+clean: 
+	rm -rf main
